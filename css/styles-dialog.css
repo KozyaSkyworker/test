@@ -1,0 +1,153 @@
+@import url(normalize.css);
+@import url(reset.css);
+
+
+/* ============================================= Styles ============================================= */
+/* wrapper */
+.dialog{
+    max-width: 652px;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;  
+    line-height: 24px;
+    font-weight: 400;
+    color: #000;
+
+    /* background-color: rgb(26, 25, 25); */
+    background-image: url(../img/bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    margin: 46px auto;
+    padding-top: 40px;
+}
+/* диалоговое окно */
+.dialog__chat{
+    overflow-y: scroll;
+    height: 518px;
+}
+/* день */
+.dialog__day{
+    padding: 0 20px;
+    margin-bottom: 30px;
+}
+.dialog__space{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.dialog__line{
+    width: 40%;
+    height: 1px;
+    background-color: #dbdbdb;
+}
+/* сообщение в чате */
+.dialog__row{
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+.dialog__row + .dialog__row{
+    margin-top: 20px;
+}
+/* фигурка для картинки */
+.dialog__poly{
+    width: 47px;
+    height: 47px;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+
+    background-color: #ccc;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* текст сообщения */
+.dialog__text{
+    position: relative;
+
+    max-width: 470px;
+    width: max-content;
+
+    border-radius: 5px;
+    background-color: #F1F3F5;  
+}
+/* сообщения от пользователя */
+.dialog__row_fromme{
+    flex-direction: row-reverse;
+}
+.dialog__row_fromme p{
+    padding: 15px 22px 7px 10px;
+}
+.dialog__row_fromme p::after{
+    position: absolute;
+    top: 7px;
+    right: -10px;
+
+    content: '';
+
+    width: 10px; 
+    height: 10px; 
+
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #F1F3F5;
+}
+/* сообщение к пользователю */
+.dialog__row_tome p::before{
+    position: absolute;
+    top: 7px;
+    left: -10px;
+
+    content: '';
+
+    width: 10px; 
+    height: 10px; 
+
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #F1F3F5;
+}
+.dialog__row_tome p{
+    padding: 15px 15px 7px 22px;
+}
+/* пользовательские возможности */
+.dialog__controls{
+    border-top: 1px solid #DBDBDB;
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 41px 0 20px;
+}
+/* сообщнеие юзера */
+.dialog__message{
+    font-family: 'Noto Sans', sans-serif; 
+
+    flex-basis: 129px;
+
+    padding: 10px;
+    margin: 20px 0;
+    
+    border-radius: 4px;
+
+    resize: none;
+}
+/* кнопка */
+.dialog__send{
+    color: #fff;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    
+    max-width: 144px;
+
+    background-color: #0F54B9;
+    border-radius: 21px;
+    border: none;
+
+    padding: 10px 22px 7px;
+    cursor: pointer;
+
+    margin-bottom: 30px;
+}
